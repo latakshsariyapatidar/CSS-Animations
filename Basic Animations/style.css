@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Gilroy, "Helvetica Neue", Helvetica;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#heading-line{
+    font-size: 5vmax;
+}
+
+#underline{
+    display: block;
+    width: 100%;
+    border: 2px solid rgb(17, 17, 17);
+}
+
+#box{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    position: absolute;
+    animation-name: basic-animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+#rolling-box{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    background-color: aliceblue;
+    animation-name:rolling-animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+
+
+
+/* Creating of animation */
+@keyframes basic-animation {
+    from{
+        left: 0%;
+    }
+
+    to{
+        left: calc(100% - 300px);
+    }
+}
+
+@keyframes rolling-animation{
+    from{
+        left: 0%;
+        rotate: 0deg;
+        background-color: aliceblue;
+    }
+
+    to{
+        left: calc(100% - 300px);
+        rotate: 360deg;
+        background-color: skyblue;
+    }
+}

@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    padding: 100px;
+}
+
+button{
+    padding: 10px 30px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    position:relative;
+    overflow: hidden;
+
+}
+
+button::after{
+    content:'';
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    transition: all linear 0.2s;
+    z-index: -1;
+    left: 6.5%;
+    top: -80%;
+    border-radius: 50%;
+    transform: scale(0);
+    overflow: hidden;
+}
+
+button:hover::after{
+    transform: scale(3);
+
+}
+button:hover{
+    color: black;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+}

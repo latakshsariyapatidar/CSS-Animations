@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#box{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    animation-name: box-animation;
+    animation-duration: 2s;
+    position:absolute;
+
+    /* This will tell when animation stops which position should the box stay at */
+    animation-fill-mode: forwards;
+
+    /* This tells how many times the animation will run */
+    animation-iteration-count: infinite;
+
+    /* This tells in which direction will the animation work */
+    animation-direction: alternate;
+
+    /* This will tell the timing function or we can say will define the animation curve of the animation */
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Creating Animations */
+
+@keyframes box-animation{
+    from{
+        left: 0%;
+        background-color: red;
+    }
+
+    to{
+        left: calc(100% - 300px);
+        background-color: blue;
+    }
+}
